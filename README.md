@@ -15,3 +15,8 @@ password
 localuser@WORK-ubuntu-dev:~$ sudo cat /tmp/.service_temp_data
 [2025-04-09 18:09:34] User: 'localuser' Password: 'password'
 ```
+
+---
+
+Tested on:
+Linux WORK-ubuntu-dev 6.11.0-21-generic #21~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Feb 24 16:52:15 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
