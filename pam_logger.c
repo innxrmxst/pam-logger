@@ -1,7 +1,5 @@
 /*
- * pam_logger.c - Malicious PAM module.
- * 
- * This code captures credentials.
+ * pam_logger.c - Malicious PAM module to capture clear text SSH login credentials.
  */
 
 #include <stdio.h>
