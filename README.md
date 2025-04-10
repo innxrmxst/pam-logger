@@ -5,7 +5,7 @@ Tested on:
 
 ---
 
-# Installing PAM clear text password logger
+# 1] Installing PAM clear text password logger
 
 Useful for collection and possible password reuse checks against other assets if cracking /etc/shadow is not an option :)
 
@@ -32,7 +32,7 @@ localuser@WORK-ubuntu-dev:~$ sudo cat /tmp/.service_temp_data
 
 ---
 
-# Installing PAM backdoor
+# 2] Installing PAM backdoor
 
 ```bash
 sudo apt install -y autoconf automake autopoint bison bzip2 docbook-xml docbook-xsl flex gettext libaudit-dev libcrack2-dev libdb-dev libfl-dev libselinux1-dev libtool libcrypt-dev libxml2-utils make pkg-config sed w3m xsltproc xz-utils gcc -y
