@@ -28,6 +28,6 @@ localuser@WORK-ubuntu-dev:~$ sudo cat /tmp/.service_temp_data
 ---
 
 TODO:
-- Add backdoor password that gives root access for any user supplied.
+- Implement backdoor password functionality that gives root access for any user supplied.
 
 
