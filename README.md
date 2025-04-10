@@ -76,6 +76,12 @@ backdoor
 localuser@WORK-ubuntu-dev:~$
 ```
 
+---
+
+TODO:
+- Merge modules;
+- Automate deployment.
+
 
 # Credits
 
