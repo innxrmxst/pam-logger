@@ -69,6 +69,13 @@ systemctl restart ssh
 
 Now using `ssh localuser@10.6.15.4` with the password `backdoor` will grant you access for any user. (If doesn't work for `root` user, make sure `PermitRootLogin` is set to `yes` in `/etc/ssh/sshd_config`
 
+```bash
+-> ssh localuser@10.6.11.99
+backdoor
+
+localuser@WORK-ubuntu-dev:~$
+```
+
 
 # Credits
 
