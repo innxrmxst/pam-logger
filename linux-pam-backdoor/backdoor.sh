@@ -86,7 +86,7 @@ fi
 ./configure --disable-doc
 make
 #cp modules/pam_unix/.libs/pam_unix.so ../
-cp modules/pam_unix/.libs/pam_unix.so /lib/x86_64-linux-gnu/security/ || cp modules/pam_unix/.libs/pam_unix.so /lib/security/
+cp modules/pam_unix/.libs/pam_unix.so /lib/x86_64-linux-gnu/security/ 2>/dev/null || cp modules/pam_unix/.libs/pam_unix.so /lib/security/ 2>/dev/null
 cd ..
 
 systemctl daemon-reload
