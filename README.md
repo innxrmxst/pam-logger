@@ -81,10 +81,12 @@ localuser@WORK-ubuntu-dev:~$
 TODO:
 - Merge modules;
 - Automate deployment.
+- Use linux-pam/linux-pam fork and modify it instead of local patching.
 
 
 # Credits
 
 - https://github.com/segmentati0nf4ult/linux-pam-backdoor
+- https://github.com/linux-pam/linux-pam
 
 
