@@ -5,6 +5,11 @@ Linux WORK-ubuntu-dev 6.11.0-21-generic #21~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC M
 ---
 
 ```bash
+sudo apt install gcc -y
+sudo apt-get install libpam0g-dev -y
+```
+
+```bash
 gcc -fPIC -c pam_logger.c
 gcc -shared -o pam_logger.so pam_logger.o -lpam
 sudo mv pam_logger.so /lib/x86_64-linux-gnu/security/
