@@ -73,11 +73,6 @@ localuser@WORK-ubuntu-dev:~$
 
 ---
 
-TODO:
-- Merge modules;
-- Automate deployment;
-- Use linux-pam/linux-pam fork and modify it instead of local patching.
-
 
 # Credits
 
